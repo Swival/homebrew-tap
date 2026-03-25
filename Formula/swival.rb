@@ -4,7 +4,7 @@ class Swival < Formula
   desc "Small, powerful CLI coding agent for open AI models"
   homepage "https://swival.dev/"
   url "https://github.com/swival/swival/releases/download/v#{version}/swival-#{version}.tar.gz"
-  sha256 "2355e0aeb8e6d7d761fcca7653c4bacbd664192257c24419c4c5b56cd4465564"
+  sha256 "43cf2706da8a0cc67ae6afcf7642a5239cbc7afc291838a81ed75b2a7928575d"
   license "MIT"
 
   depends_on "rust" => :build
@@ -169,8 +169,8 @@ class Swival < Formula
   end
 
   resource "litellm" do
-    url "https://files.pythonhosted.org/packages/29/75/1c537aa458426a9127a92bc2273787b2f987f4e5044e21f01f2eed5244fd/litellm-1.82.6.tar.gz"
-    sha256 "2aa1c2da21fe940c33613aa447119674a3ad4d2ad5eb064e4d5ce5ee42420136"
+    url "https://files.pythonhosted.org/packages/53/00/13993312e6d2fb29cd6d5ffceb293455ef747fe5675eaa9aa49b09184656/litellm-1.82.3.tar.gz"
+    sha256 "7215b95e7cc38a52b5ae778d67e8829dec86594c8b05d8431294e95c7d59937c"
   end
 
   resource "markdown-it-py" do
