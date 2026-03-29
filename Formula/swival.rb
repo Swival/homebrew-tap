@@ -79,8 +79,8 @@ class Swival < Formula
   end
 
   resource "fast-cipher" do
-    url "https://files.pythonhosted.org/packages/61/ab/be43b72c508a7abba9ae9d8938b32d66f780d88a5f91a9d309764a605c91/fast_cipher-0.2.0.tar.gz"
-    sha256 "f7c6128de8216478bbb2fc087088fc9b1220000d2f7b612029a01ed6a2016c45"
+    url "https://files.pythonhosted.org/packages/8e/b4/4bbc975c6f86b6b8a4e8b763bf12b3c62847d6db48a6323fde2cfb86269c/fast_cipher-0.2.1.tar.gz"
+    sha256 "0f16046e3ba52f5e7dcce706c0c9575b52a0cbb636690f0429d1454ab41498c0"
   end
 
   resource "fastuuid" do
