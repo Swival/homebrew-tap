@@ -11,7 +11,6 @@ class Swival < Formula
   depends_on "libyaml"
   depends_on "python@3.13"
 
-  # AUTO-GENERATED RESOURCES — run `make formula` to regenerate
   # RESOURCES_START
   resource "aiohappyeyeballs" do
     url "https://files.pythonhosted.org/packages/26/30/f84a107a9c4331c14b2b586036f40965c128aa4fee4dda5d3d51cb14ad54/aiohappyeyeballs-2.6.1.tar.gz"
@@ -374,35 +373,34 @@ class Swival < Formula
   end
   # RESOURCES_END
 
-  # Packages with broken sdists or that need maturin — use pre-built wheels.
   WHEEL_RESOURCES = %w[hf-xet rank-bm25].freeze
 
   def install
     venv = virtualenv_create(libexec, "python3.13")
     python = Formula["python@3.13"].opt_bin/"python3.13"
     venv_python = libexec/"bin/python"
+    pip_flags = ["--no-deps", "--ignore-installed", "--no-compile"]
 
-    # Install wheel-based resources (use pip directly, bypassing --no-binary).
     WHEEL_RESOURCES.each do |name|
       resource(name).stage do
         whl = Dir["*.whl"].first
         system python, "-m", "pip", "--python=#{venv_python}",
-               "install", "--no-deps", whl
+               "install", *pip_flags, whl
       end
     end
 
-    # Install sdist-based resources.
     resources.each do |r|
       next if WHEEL_RESOURCES.include?(r.name)
 
       r.stage do
-        venv.pip_install "."
+        system python, "-m", "pip", "--python=#{venv_python}",
+               "install", *pip_flags, "."
       end
     end
 
-    venv.pip_install buildpath
+    system python, "-m", "pip", "--python=#{venv_python}",
+           "install", *pip_flags, buildpath
 
-    # Link the entry point into bin/
     (bin/"swival").write_env_script libexec/"bin/swival", PATH: "#{libexec}/bin:${PATH}"
   end
 
