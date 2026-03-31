@@ -3,8 +3,8 @@ class Swival < Formula
 
   desc "Small, powerful CLI coding agent for open AI models"
   homepage "https://swival.dev/"
-  url "https://github.com/Swival/swival/archive/refs/tags/0.10.3.tar.gz"
-  sha256 "310db01cf99bed74d9cfc35b9639221cbef910ccbf0c5698abfddbf185b8e77f"
+  url "https://github.com/Swival/swival/archive/refs/tags/0.10.4.tar.gz"
+  sha256 "6016ee0c5177b30437c719b126f52a93f7fc0e3c3f846973cfee8f93a08574f2"
   license "MIT"
 
   depends_on "rust" => :build
@@ -48,13 +48,13 @@ class Swival < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a8/2b/ebdad075934cf6bb78bf81fe31d83339bcd804ad6c856f7341376cbc88b6/boto3-1.42.78.tar.gz"
-    sha256 "cef2ebdb9be5c0e96822f8d3941ac4b816c90a5737a7ffb901d664c808964b63"
+    url "https://files.pythonhosted.org/packages/72/56/3909516140653c389214d01f15660fa76514a9a9e30da1cb9e894f01051e/boto3-1.42.79.tar.gz"
+    sha256 "286c4220785e4fbe46aaea04d005b0dcdd8aaf5b885d92b2609c934d794ec5d9"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/67/8e/cdb34c8ca71216d214e049ada2148ee08bcda12b1ac72af3a720dea300ff/botocore-1.42.78.tar.gz"
-    sha256 "61cbd49728e23f68cfd945406ab40044d49abed143362f7ffa4a4f4bd4311791"
+    url "https://files.pythonhosted.org/packages/f3/4b/ec7b3a9acc47a27a3e279d6532f8fcaf16e44c840895718129ca339a0719/botocore-1.42.79.tar.gz"
+    sha256 "1ea98f505a1a65c4b6eed4a6b7452f27613c9aa24532aa71650ec3f3e05fa32c"
   end
 
   resource "certifi" do
@@ -123,8 +123,8 @@ class Swival < Formula
   end
 
   resource "html-to-markdown" do
-    url "https://files.pythonhosted.org/packages/11/90/6cd0f8306f8537101074ac233dd24b76d9949cb01c10bcc45099e912ca2a/html_to_markdown-2.30.0.tar.gz"
-    sha256 "499300fdb538252c00abab5d8fee474243c761ade1faf7dbc854ca068d1bd263"
+    url "https://files.pythonhosted.org/packages/72/89/fb576d72ef669684cfedc6c0a15f6be62d37a4d13ce2bff992c6015b152b/html_to_markdown-3.0.0.tar.gz"
+    sha256 "8ab372c66d353cddd452a7b5b96e70652835ed5ebab5eb6c41ebb64fc45ca94b"
   end
 
   resource "httpcore" do
@@ -303,8 +303,8 @@ class Swival < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "rich" do
