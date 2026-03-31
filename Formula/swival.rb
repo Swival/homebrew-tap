@@ -5,13 +5,13 @@ class Swival < Formula
   sha256 "6016ee0c5177b30437c719b126f52a93f7fc0e3c3f846973cfee8f93a08574f2"
   license "MIT"
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
   depends_on "uv"
 
   preserve_rpath
 
   def install
-    python = Formula["python@3.13"].opt_bin/"python3.13"
+    python = Formula["python@3.14"].opt_bin/"python3.14"
     system "uv", "venv", "--python", python.to_s, libexec.to_s
     system "uv", "pip", "install", "--python", (libexec/"bin/python").to_s, buildpath.to_s
     (bin/"swival").write_env_script libexec/"bin/swival", PATH: "#{libexec}/bin:${PATH}"
