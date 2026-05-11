@@ -8,6 +8,7 @@ class Swival < Formula
   depends_on "python@3.13"
   depends_on "uv"
   depends_on "go" => :build
+  depends_on "rust" => :build
 
   preserve_rpath
 
