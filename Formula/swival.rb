@@ -1,8 +1,8 @@
 class Swival < Formula
   desc "Small, powerful CLI coding agent for open AI models"
   homepage "https://swival.dev/"
-  url "https://github.com/Swival/swival/archive/refs/tags/1.0.18.tar.gz"
-  sha256 "104da5d24fc281aeff155497d9013b13e1c1397aee859af0f3eb781132ddae51"
+  url "https://github.com/Swival/swival/archive/refs/tags/1.0.19.tar.gz"
+  sha256 "7d2f91ae8e9c1c58b3ef4de4d8595ee30a4df6fdc1ef0004e457fc26d295472f"
   license "MIT"
 
   depends_on "python@3.14"
