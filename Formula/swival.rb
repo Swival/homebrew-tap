@@ -5,10 +5,10 @@ class Swival < Formula
   sha256 "77c56dffb15d28a8012513d3b09fecba335bdef209db78998c303ad88a5a4b13"
   license "MIT"
 
-  depends_on "python@3.14"
-  depends_on "uv"
   depends_on "go" => :build
   depends_on "rust" => :build
+  depends_on "uv" => :build
+  depends_on "python@3.14"
 
   preserve_rpath
 
