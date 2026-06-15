@@ -1,8 +1,9 @@
 # Homebrew Tap for Swival
 
-Install [Swival](https://github.com/swival/swival) on macOS:
+Install [Swival](https://github.com/swival/swival) on macOS. Trust the tap first, then install:
 
 ```sh
+brew trust swival/tap
 brew install swival/tap/swival
 ```
 
